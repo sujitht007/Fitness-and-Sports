@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Rewards System</title>
+    <link rel="stylesheet" href="reward.css">
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1>Task Rewards System</h1>
+            <p>Complete tasks to earn rewards!</p>
+            <p>Total Points: <span id="points">0</span></p>
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+        </header>
+
+        <section class="task-section">
+            <h2>Available Tasks</h2>
+            <ul class="task-list">
+                <li>Read an article <button onclick="completeTask('Read an article', 10)">Complete</button></li>
+                <li>Complete a quiz <button onclick="completeTask('Complete a quiz', 20)">Complete</button></li>
+                <li>Share a workout photo <button onclick="completeTask('Share a workout photo', 30)">Complete</button></li>
+                <li>Log daily water intake <button onclick="completeTask('Log daily water intake', 15)">Complete</button></li>
+                <li>Invite a friend <button onclick="completeTask('Invite a friend', 50)">Complete</button></li>
+            </ul>
+        </section>
+
+        <section class="leaderboard">
+            <h2>Leaderboard</h2>
+            <table>
+                <tr><th>Name</th><th>Points</th></tr>
+                <tr><td><span id="user-name">You</span></td><td id="user-points">0</td></tr>
+            </table>
+            <input type="text" id="name-input" placeholder="Enter your name">
+            <button onclick="setUserName()">Save Name</button>
+        </section>
+
+        <section class="feedback">
+            <h2>Feedback</h2>
+            <textarea id="feedback" placeholder="Share your thoughts..."></textarea>
+            <button onclick="submitFeedback()">Submit Feedback</button>
+            <p id="feedback-message"></p>
+        </section>
+        
+        <div id="reward-modal" class="modal">
+            <div class="modal-content">
+                <p id="reward-message"></p>
+                <button onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="reward.js"></script>
+</body>
+</html>

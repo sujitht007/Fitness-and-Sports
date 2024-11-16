@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbox</title>
+    <link rel="stylesheet" href="chatstyles.css">
+</head>
+<body>
+    <div class="chatbox">
+        <div class="chat-history" id="chatHistory"></div>
+        <div class="typing-indicator" id="typingIndicator" style="display: none;">Bot is typing...</div>
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Type your message..." onkeydown="handleKey(event)" />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+        <button class="clear-chat" onclick="clearChat()">Clear Chat</button>
+    </div>
+    <script src="chatscript.js"></script>
+</body>
+</html>
